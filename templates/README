@@ -1,0 +1,2 @@
+- Since not using IDE copy usefull templates here.
+- "javac src/helloworldmain/HelloWorldMain.java -d target" to compile

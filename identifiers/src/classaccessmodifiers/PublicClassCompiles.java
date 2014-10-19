@@ -1,0 +1,3 @@
+package classaccessmodifiers;
+
+class PublicClassCompiles{}

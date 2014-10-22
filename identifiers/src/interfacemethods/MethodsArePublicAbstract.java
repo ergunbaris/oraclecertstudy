@@ -12,3 +12,7 @@ abstract interface MethodsArePublicAbstract2{
 abstract interface MethodsArePublicAbstract3{
     abstract public  boolean fx();
 } 
+
+class A implements MethodsArePublicAbstract{
+    int f(){return 1;}
+}

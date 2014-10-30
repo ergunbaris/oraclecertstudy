@@ -18,13 +18,13 @@ class Animal{
 class Fish extends Animal{
     private final String color;
     Fish(){
-	//this.color = "blue";
+	this.color = "blue";
 	System.out.println("A " + color  +" Fish borns");
     }
     Fish(String color){
 	this();
 	this.color = color;
-	System.out.println("A " + color  +" Fish borns");
+	System.out.println("A color" + color  +" Fish borns");
     }
     public void eat(){	
 	System.out.println("Fish eats");

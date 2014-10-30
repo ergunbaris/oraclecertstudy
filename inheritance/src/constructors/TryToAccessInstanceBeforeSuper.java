@@ -19,7 +19,7 @@ class Animal{
 }
 
 class Fish extends Animal{
-    private final String color;
+    private String color;
     Fish(){
 	this.color = "blue";
 	System.out.println("A " + color  +" Fish borns");

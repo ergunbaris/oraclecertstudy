@@ -1,11 +1,13 @@
 package dimension;
 
 public class SameDimension{
-    public static void main(){
+    public static void main(String...args){
 	int [][] twoDimArray = new int [3][];
 	int [] oneDimArray = new int[5];
-	int sample = 7;
-	twoDimArray[0] = sample; //must fail
+	Integer sample = 7;
+	Object sampleObj = sample;
+	twoDimArray[0] = (int[])sampleObj; //must fail on run time
+	//twoDimArray[0] = sample; //this will fail on compile
 	twoDimArray[0] = oneDimArray;
     }
 }

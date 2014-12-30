@@ -5,6 +5,7 @@ class SwitchCaseConstant{
 	final int a = 1;
 	final int b;
 	b=2; // what do you expect local variables are not initialized when declared
+	b=3;
 	int x = 0;
 	switch(x){
 	   case a:
@@ -15,6 +16,17 @@ class SwitchCaseConstant{
 	   default:
 	   break;
 
+	}
+	String y = "sample";
+	final String d = "soso";
+	final String e;
+	e = "did";
+	e = "was";	
+	switch(y){
+	    case d:
+	    break;
+	    case e:
+	    break;
 	}
     }
 }

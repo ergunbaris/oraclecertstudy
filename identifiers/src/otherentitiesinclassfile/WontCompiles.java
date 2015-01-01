@@ -10,12 +10,10 @@ enum OhFine{FINE}
 
 enum OhFineWithSemiColonEnding{FINE(1);private int someValue;OhFineWithSemiColonEnding(int i){this.someValue = i;}};
 
-private class AnotherClass{}
+private class AnotherClass{} // Wont
 
-protected class AnotherClass2{}
+protected class AnotherClass2{} // Wont
 
-private enum AnotherEnum{ZOP,ZAP}
+private enum AnotherEnum{ZOP,ZAP} // Wont
 
-protected enum AnotherEnum2{UFF}
-
-
+protected enum AnotherEnum2{UFF} // Wont

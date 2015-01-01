@@ -1,6 +1,6 @@
 package interfacevariables;
 
-public abstract interface MethodsArePublicAbstract{
+public abstract interface MethodsWontCompile{
     native int f();
     public double x();
 } 

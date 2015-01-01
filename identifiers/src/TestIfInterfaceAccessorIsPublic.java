@@ -1,0 +1,5 @@
+import interfacevariables.MethodsArePublicAbstract2;
+
+class TestIfInterfaceAccessorIsPublic implements MethodsArePublicAbstract2{
+}
+

@@ -1,17 +1,18 @@
 package switchs;
 class SwitchCaseConstant{
-    final static int c;
+    final static int c = 3;
     public static void main(String...args){
 	final int a = 1;
 	final int b;
 	b=2; // what do you expect local variables are not initialized when declared
-	b=3;
 	int x = 0;
 	switch(x){
 	   case a:
 	   break;
 	   case a: // also not legal
 	   case b: //compiler error
+	   break;
+	   case c:
 	   break;
 	   default:
 	   break;
@@ -21,12 +22,11 @@ class SwitchCaseConstant{
 	final String d = "soso";
 	final String e;
 	e = "did";
-	e = "was";	
 	switch(y){
 	    case d:
 	    break;
-	    case e:
-	    break;
+	    //case e:
+	    //break;
 	}
     }
 }

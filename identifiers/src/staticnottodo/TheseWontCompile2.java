@@ -1,7 +1,7 @@
 package staticnottodo;
 
-public static class TheseWontCompile {
-   static TheseWontCompile(){
+public static class TheseWontCompile2 {
+   static TheseWontCompile2(){
    }    
 }
 

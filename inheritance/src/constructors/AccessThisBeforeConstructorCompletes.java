@@ -15,16 +15,16 @@ class Square extends Shape{
 	xLength = sideLength;
    }
    private String aboutShape = this.toString();// This means calling 
-   // base class toString because this is not initialized yet
-   // and because of inheritance Squares toString method will be invoked
-   // but with unitialized defaults.
+   // the method with unitialized values. Because constructor not finsihed yet
+
+   private int area = this.calculateArea();
    public int calculateArea(){
 	return xLength^2;
    }
 
    @Override
    public String toString(){
-	return "Square sideLength=" + xLength;
+	return "Square sideLength=" + xLength + " area=" + area;
    }
 
    public void displayAbout(){

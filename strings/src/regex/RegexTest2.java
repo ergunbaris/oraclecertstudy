@@ -15,7 +15,7 @@ public class RegexTest2{
 	System.out.println("\nexpression: " + m.pattern());
 	System.out.print("match positions: ");
 	while(m.find()){	    
-  	    System.out.println("on index:" + m.start() + " there is a match:" + m.group());
+  	    System.out.println("start:" + m.start() + " end:" + m.end() +  " there is a match:" + m.group());
 	}
 	System.out.println();
 	

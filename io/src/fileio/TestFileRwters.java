@@ -33,10 +33,25 @@ public class TestFileRwters{
 	    System.out.print(c);
 	}
 	fr.close();
-	System.out.println("isFileDeleted:" + myFile.delete());
-	System.out.println("isFileDeleted:" + myFile.delete());
-	System.out.println("isDirDeleted:" + myDir.delete());
-	System.out.println("isDirDeleted:" + myDir.delete());
+	String [] listOfFiles = myDir.list();
+	for(String file:listOfFiles){
+	    System.out.println("file listed:" + file);
+	}
+	System.out.println("file name:" + myFile.getName());	
+	File myFile2 = new File(myDir,"zemple" + System.currentTimeMillis());
+	boolean isRenamed = myFile.renameTo(myFile2);
+	System.out.println("isFileRenamed:" + isRenamed);
+	System.out.println("renamed file name:" + myFile2.getName());		
+	System.out.println("myFile.exists():" + myFile.exists());
+	System.out.println("myFile2.exists():" + myFile2.exists());
+	listOfFiles = myDir.list();
+	for(String file:listOfFiles){
+	    System.out.println("file listed:" + file);
+	}
+	System.out.println("myFile2.delete():" + myFile2.delete());
+	System.out.println("myFile.delete():" + myFile.delete());
+	System.out.println("myDir.delete():" + myDir.delete());
+	System.out.println("myDir.delete():" + myDir.delete());
 	
     }
 }

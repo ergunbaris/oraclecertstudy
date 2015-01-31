@@ -16,8 +16,8 @@ public class TestPrintRwters{
 	System.out.println("myDir.exists():" + myDir.exists());
 
 	File myFile = new File(myDir,"sample" + System.currentTimeMillis());
-	boolean isFileCreated = myFile.createNewFile();
-	System.out.println("isFileCreated: " + isFileCreated);
+	//boolean isFileCreated = myFile.createNewFile(); no need PrintWriter will auto create if not exists
+	//System.out.println("isFileCreated: " + isFileCreated);
 	System.out.println("myFile.isDirectory():" + myFile.isDirectory());
 	System.out.println("myFile.isFile():" + myFile.isFile());
 	System.out.println("myFile.exists():" + myFile.exists());

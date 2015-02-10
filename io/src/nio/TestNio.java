@@ -4,6 +4,7 @@ import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.nio.file.FileSystems;
 import java.io.File;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.io.IOException;
 
 public class TestNio{
@@ -31,6 +32,11 @@ public class TestNio{
         createFile(convertedPath);
         System.out.printf("patshShort: %s exists()= %b\n", pathShort.getFileName(),Files.exists(pathShort));
         System.out.printf("pathShort: %s notExists()= %b\n", pathShort.getFileName(),Files.notExists(pathShort));
+        BasicFileAttributes basic = Files.readAttributes(convertedPath, BasicFileAttributes.class);
+        System.out.println("create time:" + basic.creationTime());
+        System.out.println("access time:" + basic.lastAccessTime());
+        System.out.println("modify time:" + basic.lastModifiedTime());
+        System.out.println("is directory:" + basic.isDirectory());
         Files.delete(pathShort);
         String tmpDirectory1 = "/tmp/temp1";
         String tmpDirectory2 = "/tmp/temp1/temp2";

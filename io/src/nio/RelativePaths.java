@@ -38,7 +38,8 @@ public class RelativePaths{
         System.out.printf("relative path pf %s to %s is %s\n",path4,path3,relative1);
 
         Path pathRelativeFromScratch = Paths.get("whatever");
-        Path relative2 = path3.relativize(pathRelativeFromScratch);
+        System.out.printf("weird resolve path from %s to %s is %s\n", path1a, pathRelativeFromScratch, path1a.resolve(pathRelativeFromScratch));
+        Path relative2 = path3.relativize(pathRelativeFromScratch); //expecting exception
         System.out.printf("relative path pf %s to %s is %s\n",pathRelativeFromScratch,path3,relative2);//expecting exception
         
                 

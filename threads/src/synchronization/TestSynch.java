@@ -1,19 +1,25 @@
 package synchronization;
 
 public class TestSynch{
-    public static void main(String...args) throws Exception{
+    public static void main(String...args){
         StringBuffer strBuf = new StringBuffer("A");
-        Thread t1 = new Thread(new PutOutLetters(strBuf));
-        Thread t2 = new Thread(new PutOutLetters(strBuf));
-        Thread t3 = new Thread(new PutOutLetters(strBuf));
+        synchronized(args){// could do this but make no sense since
+            // it is not a shared object.      
+            Thread t1 = new Thread(new PutOutLetters(strBuf));
+            Thread t2 = new Thread(new PutOutLetters(strBuf));
+            Thread t3 = new Thread(new PutOutLetters(strBuf));
 
-        t1.start();
-        t2.start();
-        t3.start();
+            t1.start();
+            t2.start();
+            t3.start();
 
-        t1.join();
-        t2.join();
-        t3.join();
+            try { 
+                t1.join();
+                t2.join();
+                t3.join();
+            }catch(InterruptedException e){
+            }
+        }
         
         System.out.println();
     }
@@ -23,6 +29,10 @@ class PutOutLetters implements Runnable{
     private final StringBuffer strBuffer;
     public PutOutLetters(StringBuffer strBuffer){
         this.strBuffer = strBuffer;
+    }
+    private void test(Object obj){
+        synchronized(obj){
+        }
     }
     public void run(){        
         for(int i=0;i<100;i++){

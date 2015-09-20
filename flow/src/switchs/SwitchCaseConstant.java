@@ -10,7 +10,7 @@ class SwitchCaseConstant{
 	   case a:
 	   break;
 	   case a: // also not legal
-	   case b: //compiler error
+	   case b: // compiler error only initialized when declared constants accepted.
 	   break;
 	   case c:
 	   break;

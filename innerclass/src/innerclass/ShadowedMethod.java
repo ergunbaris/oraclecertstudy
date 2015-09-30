@@ -15,7 +15,7 @@ class A {
     }
     class B{
         void m1(){
-            m1(a);
+            m1(a); // fails because m1 is shadowed by name m1
             // SHADOWING IS BASED ON NAME RATHER THAN SIGNATURE
             // A.this.m1(a);
         }
